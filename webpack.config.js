@@ -2,7 +2,7 @@ var getConfig = require('hjs-webpack')
 
 var config = getConfig({
   // entry point for the app
-  in: 'src/app.js',
+  in: 'src/client.js',
 
   // Name or full path of output directory
   // commonly named `www` or `public`. This

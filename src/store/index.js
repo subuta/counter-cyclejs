@@ -6,7 +6,7 @@ export default function configureStore (initialState) {
   const store = createStore(reducer, initialState, compose(
     applyMiddleware(thunk),
     // call devTools if browser's redux-devtools extension enabled.
-    window.devToolsExtension ? window.devToolsExtension({name: 'edit.js'}) : f => f
+    window.devToolsExtension ? window.devToolsExtension({name: 'counter-redux'}) : f => f
   ))
 
   if (module.hot) {

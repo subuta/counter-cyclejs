@@ -1,4 +1,4 @@
-import { ADD_TODO } from 'constants/ActionTypes'
+import { INCREMENT_COUNTER } from 'constants/ActionTypes'
 
 const initialState = {
   counter: 0
@@ -6,9 +6,7 @@ const initialState = {
 
 export default function editor (state = initialState, action) {
   switch (action.type) {
-    case ADD_TODO:
-      return state
-    case 'CLICKED':
+    case INCREMENT_COUNTER:
       return {
         counter: state.counter + 1
       }
