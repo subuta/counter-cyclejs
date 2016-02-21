@@ -5,7 +5,8 @@ import reducer from 'reducers'
 export default function configureStore (initialState) {
   const store = createStore(reducer, initialState, compose(
     applyMiddleware(thunk),
-    window.devToolsExtension ? window.devToolsExtension() : f => f
+    // call devTools if browser's redux-devtools extension enabled.
+    window.devToolsExtension ? window.devToolsExtension({name: 'edit.js'}) : f => f
   ))
 
   if (module.hot) {
